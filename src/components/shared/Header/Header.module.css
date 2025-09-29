@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 15px;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+.inner {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-big);
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}

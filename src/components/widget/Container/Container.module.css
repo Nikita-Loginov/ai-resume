@@ -1,0 +1,5 @@
+.box {
+    max-width: var(--container-max-width-with-padding);
+    padding: 0 var(--container-padding-inline);
+    margin: 0 auto;
+}

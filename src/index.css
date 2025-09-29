@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("./assets/fonts/Onest-Regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("./assets/fonts/Onest-SemiBold.woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+html {
+  --white-color: #ffffff;
+  --black-color: #1d2939;
+  --gray-color-100: #475467;
+  --gray-color-200: #98a2b3;
+  --orange-color: #fceed8;
+  --orange-dark-color: #73321b;
+  --orange-100-color: #f79009;
+  --green-color: #d5faf1;
+  --green-dark-color: #254d4a;
+  --green-100-color: #35746e;
+  --red-color: #f9e3e2;
+  --red-dark-color: #752522;
+  --red-100-color: #dd524c;
+  --blueviolet-color: #6e7aff;
+  --main-gradient: linear-gradient(180deg, #f2aacb, #16a2c0);
+
+  --blueviolet-gradient: linear-gradient(180deg, #8e98ff 0%, #606beb 100%);
+
+  --container-padding-inline: 20px;
+  --container-max-width: 1880px;
+  --container-max-width-with-padding: calc(
+    var(--container-padding-inline) + var(--container-max-width)
+  );
+
+  --border-radius-big: 999px;
+  --border-radius-middle: 60px;
+  --border-radius-x: 40px;
+  --border-radius-s: 30px;
+  --border-radius-l: 18px;
+
+  --font-width-main: 400;
+  --font-width-big: 600;
+
+  --fz-main: 24px;
+
+  --lh-main: 1.2;
+  --lh-big: 1.4;
+
+  --main-font: "Onest";
+}
+
+#root {
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--main-font), sans-serif;
+  font-weight: var(--font-width-main);
+  font-size: var(--fz-main);
+  line-height: var(--lh-main);
+  color: var(--black-color);
+  background-image: var(--main-gradient);
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+h1,
+.h1 {
+  font-weight: var(--font-width-big);
+  font-size: 64px;
+}
+
+h2,
+.h2 {
+  font-weight: var(--font-width-big);
+  font-size: 40px;
+}
+
+h3,
+.h3 {
+  font-weight: var(--font-width-big);
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+h4,
+.h4 {
+  font-weight: var(--font-width-big);
+  font-size: 30px;
+}
+
+.p1 {
+  font-size: 20px;
+  line-height: var(--lh-big);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon svg,
+.icon img {
+  width: 100%;
+  height: 100%;
+}

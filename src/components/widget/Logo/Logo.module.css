@@ -1,0 +1,16 @@
+.box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.text {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
