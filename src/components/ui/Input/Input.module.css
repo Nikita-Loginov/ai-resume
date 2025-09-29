@@ -1,0 +1,15 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.error {
+   color: var(--red-100-color);
+}

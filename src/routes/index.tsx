@@ -1,5 +1,8 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
+
 import Template from "../pages/Template/Template";
+
+import { Authorization } from "../pages/Authorization/Authorization";
 
 import type { IUser } from "../types";
 
@@ -21,6 +24,10 @@ const router = (user: IUser) => {
         },
       ],
     },
+    {
+      path: '/auth',
+      element: <Authorization />
+    }
   ]);
 };
 

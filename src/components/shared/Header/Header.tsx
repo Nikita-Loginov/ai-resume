@@ -1,6 +1,6 @@
 import { Container } from "../../widget/Container/Container";
 import { Logo } from "../../widget/Logo/Logo";
-import { ButtonLink } from "../ButtonLink/ButtonLink";
+import { ButtonLink } from "../../ui/ButtonLink/ButtonLink";
 
 import css from "./Header.module.css";
 
@@ -9,9 +9,9 @@ export const Header = () => {
     <header className={css.header}>
       <Container>
         <div className={css.inner}>
-            <Logo />
+          <Logo />
 
-            <ButtonLink text="Загрузить резюме" to="/upload"/>
+          <ButtonLink text="Загрузить резюме" to="/upload" />
         </div>
       </Container>
     </header>

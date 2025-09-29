@@ -13,8 +13,6 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
       '@assets': resolve(__dirname, './src/assets'),
       '@components': resolve(__dirname, './src/components'),
-      // УДАЛИТЕ этот алиас - он вызывает проблему
-      // '@mui/styled-engine': '@mui/styled-engine-sc'
     },
   },
   optimizeDeps: {

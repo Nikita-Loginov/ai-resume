@@ -2,12 +2,18 @@ import { Link } from "react-router-dom";
 
 import { Button } from "@mui/material";
 
+import { rc } from "@/utils/rc";
+
+import css from './ButtonLink.module.css';
+
 interface ButtonLinkProps {
   to?: string;
   onClick?: () => void;
   size?: "large" | "big";
   text: string;
   variant?: "primary" | "secondary";
+  type?: 'button' | 'reset' | 'submit';
+  disabled?: boolean;
 }
 
 export const ButtonLink: React.FC<ButtonLinkProps> = ({
@@ -45,7 +51,7 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
   }
 
   return (
-    <Button onClick={onClick} sx={buttonStyles} {...props}>
+    <Button className={rc([css.box, props.disabled ? css.disabled : ''])} onClick={onClick} sx={buttonStyles} {...props}>
       {text}
     </Button>
   );
