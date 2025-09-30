@@ -1,3 +1,6 @@
 export type IUser = {
-    id: number;
-}
+    id: string | null;
+    name: string | null;
+    email: string | null;
+    token: string | null
+} | null

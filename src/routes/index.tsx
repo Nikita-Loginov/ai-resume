@@ -1,18 +1,19 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import Template from "../pages/Template/Template";
-
-import { Authorization } from "../pages/Authorization/Authorization";
+import { AuthTemplate } from "@/pages/Auth/Template/AuthTemplate";
+import { Login } from "@/pages/Auth/Login/Login";
+import { Register } from "@/pages/Auth/Register/Register";
 
 import type { IUser } from "../types";
 
-const router = (user: IUser) => {
-  const isLoggedIn = true;
+export const getRoutes = (user: IUser | null) => {
+  const isLoggedIn = !!user?.id;
 
-  return createBrowserRouter([
+  return [
     {
       path: "/",
-      element: isLoggedIn ? <Template /> : <Navigate to="/auth" />,
+      element: isLoggedIn ? <Template /> : <Navigate to="/auth/login" replace />,
       children: [
         {
           index: true,
@@ -25,10 +26,29 @@ const router = (user: IUser) => {
       ],
     },
     {
-      path: '/auth',
-      element: <Authorization />
-    }
-  ]);
+      path: "/auth",
+      element: !isLoggedIn ? <AuthTemplate /> : <Navigate to="/" replace />,
+      children: [
+        {
+          path: "login",
+          element: <Login />,
+        },
+        {
+          path: "register",
+          element: <Register />,
+        },
+        { path: "", element: <Navigate to="/auth/login" replace /> },
+      ],
+    },
+    {
+      path: "*",
+      element: <p>Ошибка 404</p>,
+    },
+  ];
 };
 
-export default router;
+const createRouter = (user: IUser | null) => {
+  return createBrowserRouter(getRoutes(user));
+};
+
+export default createRouter;

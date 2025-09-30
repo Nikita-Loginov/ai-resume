@@ -3,3 +3,12 @@
   pointer-events: none;
   color: #fff;
 }
+
+.box.disabled.secondary {
+  color: var(--black-color)
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
