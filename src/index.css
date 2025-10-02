@@ -110,9 +110,15 @@ html {
   --red-dark-color: #752522;
   --red-100-color: #dd524c;
   --blueviolet-color: #6e7aff;
-  --main-gradient: linear-gradient(180deg,#adecff, #e4dfdf);
+  --main-gradient: linear-gradient(180deg, #adecff, #e4dfdf);
 
   --blueviolet-gradient: linear-gradient(180deg, #8e98ff 0%, #606beb 100%);
+
+  --box-gradient: linear-gradient(
+    180deg,
+    rgba(193, 211, 248, 0.1) 0%,
+    rgba(167, 191, 241, 0.3) 100%
+  );
 
   --container-padding-inline: 20px;
   --container-max-width: 1880px;
@@ -159,6 +165,10 @@ body {
 
 .main {
   flex: 1;
+  padding-top: calc(var(--header-height, 90) + 15px + 50px);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
 }
 
 h1,
@@ -207,4 +217,18 @@ h4,
 .icon img {
   width: 100%;
   height: 100%;
+}
+
+.animation-transform {
+  animation: transform-to-start 0.3s linear;
+}
+
+@keyframes transform-to-start {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }

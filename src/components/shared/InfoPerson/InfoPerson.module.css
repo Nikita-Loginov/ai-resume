@@ -1,0 +1,13 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.head {
+  font-weight: var(--font-width-big);
+}
+
+.text {
+  color: var(--gray-color-100);
+}

@@ -1,9 +1,12 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import Template from "../pages/Template/Template";
+
 import { AuthTemplate } from "@/pages/Auth/Template/AuthTemplate";
 import { Login } from "@/pages/Auth/Login/Login";
 import { Register } from "@/pages/Auth/Register/Register";
+import { Home } from "@/pages/Home/Home";
+import { Upload } from "@/pages/Upload/Upload";
 
 import type { IUser } from "../types";
 
@@ -17,11 +20,11 @@ export const getRoutes = (user: IUser | null) => {
       children: [
         {
           index: true,
-          element: <p>Это главная</p>,
+          element: <Home />,
         },
         {
-          path: "/about",
-          element: <p>Это about</p>,
+          path: "/upload",
+          element: <Upload />,
         },
       ],
     },

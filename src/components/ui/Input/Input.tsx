@@ -13,10 +13,15 @@ interface InputProps {
   value?: string;
   disabled?: boolean;
   autoComplete?: string;
+  multiline?: boolean;
+  rows?: number;
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ error, name, head, type, placeholder, value, ...props }, ref) => {
+  (
+    { error, name, head, type, placeholder, value, multiline, rows, ...props },
+    ref
+  ) => {
     return (
       <label className={css.box}>
         <div className={css.block}>
@@ -32,7 +37,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                 padding: "10px 18px",
                 fontSize: "16px",
                 color: "var(--black-color)",
-                backgroundColor: "transparent",
+                backgroundColor: "#fff",
                 border: error
                   ? "1px solid var(--red-100-color)"
                   : "1px solid transparent",
@@ -42,6 +47,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                 minHeight: "30px",
                 height: "auto",
                 transition: "border-color 0.2s ease",
+
                 "&:focus": {
                   borderColor: "var(--blueviolet-color)",
                   outline: "none",
@@ -57,15 +63,17 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
               "&:after": {
                 display: "none",
               },
-              "& .Mui-disabled" : {
-                pointerEvents: "none"
-              }
+              "& .Mui-disabled": {
+                pointerEvents: "none",
+              },
             }}
             inputRef={ref}
             type={type || "text"}
             name={name}
             placeholder={placeholder}
             value={value}
+            multiline={multiline}
+            rows={rows}
             {...props}
           />
         </div>

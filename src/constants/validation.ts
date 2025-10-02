@@ -17,3 +17,15 @@ export const PASSWORD_CONFIG = {
     message: "Пароль должен содержать минимум 6 символов",
   },
 } as const;
+
+export const COMPANY_CONFIG = {
+  required: "Название компании обязательно",
+} as const;
+
+export const SPECIAL_CONFIG = {
+  required: "Название специальности обязательно",
+} as const;
+
+export const DESCR_CONFIG = {
+  required: "Описание вакансии обязательно",
+} as const;

@@ -1,0 +1,9 @@
+.page {
+  flex: 1;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}

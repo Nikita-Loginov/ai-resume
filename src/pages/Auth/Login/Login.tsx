@@ -16,6 +16,8 @@ import type { IForm } from "../types";
 
 import { TopInfo } from "@/components/shared/TopInfo/TopInfo";
 import { Form } from "../parts/Form/Form";
+import { BottomInfo } from "../parts/BottomInfo/BottomInfo";
+
 import type { IUser } from "@/types";
 
 export const Login = () => {
@@ -98,6 +100,8 @@ export const Login = () => {
         errorSubmit={statusError}
         isLoadingSubmit={isLoading || isGoogleLoading}
       />
+
+      <BottomInfo text="Нет аккаунта?" link="Зарегистрируйся" to="/auth/register"/>
     </>
   );
 };

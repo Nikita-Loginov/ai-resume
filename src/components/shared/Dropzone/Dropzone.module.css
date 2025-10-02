@@ -1,0 +1,118 @@
+.box {
+  width: 100%;
+
+  background-image: var(--box-gradient);
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 0px 12px 0px rgba(36, 99, 235, 0.2) inset;
+  padding: 10px;
+  border-radius: var(--border-radius-s);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.file-zone {
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: var(--border-radius-s);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  border: 3px solid transparent;
+  transition: all 0.5s;
+  flex: 1;
+  justify-content: center;
+  min-height: 340px;
+}
+
+.file-zone.active,
+.file-zone:hover {
+  border-color: var(--blueviolet-color);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: var(--border-radius-l);
+  box-shadow: 0px -2px 4px 0px rgba(255, 255, 255, 0.5) inset;
+  background-image: linear-gradient(180deg, #a1a1a9 0%, #3f3f45 100%);
+}
+
+.icon img,
+.icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.error {
+  color: var(--red-100-color);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: var(--border-radius-s);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.block-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--blueviolet-color);
+}
+
+.fileIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-color);
+}
+
+.fileIcon svg,
+.fileIcon img {
+  width: 24px;
+  height: 24px;
+}
+
+.fileIcon svg path {
+  fill: var(--white-color);
+}
+
+.delete {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+}
+
+.delete svg,
+.delete img {
+  width: 100%;
+  height: 100%;
+}

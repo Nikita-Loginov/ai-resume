@@ -2,8 +2,6 @@ import { Outlet } from "react-router-dom";
 
 import { Header } from "../../components/shared/Header/Header";
 
-import styles from "./Template.module.css";
-
 const Template = () => {
   return (
     <div className="wrapper">
@@ -12,8 +10,6 @@ const Template = () => {
       <main className="main">
         <Outlet />
       </main>
-
-      <footer>footer</footer>
     </div>
   );
 };

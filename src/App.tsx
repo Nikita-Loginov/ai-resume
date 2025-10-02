@@ -15,11 +15,10 @@ import createRouter from "./routes";
 export const App = () => {
   const dispatch = useDispatch();
   const { user, isLoading } = useSelector((state: RootState) => state.user);
-  const [router, setRouter] = useState(() => createRouter(user));
+  const [router, setRouter] = useState<ReturnType<typeof createRouter> | null>(null);
 
   useEffect(() => {
     dispatch(setLoading(true));
-
 
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser) {
@@ -42,10 +41,12 @@ export const App = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    setRouter(createRouter(user));
-  }, [user]);
+    if (!isLoading) {
+      setRouter(createRouter(user));
+    }
+  }, [user, isLoading]);
 
-  if (isLoading) {
+  if (isLoading || !router) {
     return (
       <div style={{ height: "100vh" }}>
         <Loader text="Проверяем авторизацию..." />
@@ -55,3 +56,4 @@ export const App = () => {
 
   return <RouterProvider router={router} />;
 };
+

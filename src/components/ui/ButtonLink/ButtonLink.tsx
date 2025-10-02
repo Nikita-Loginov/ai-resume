@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-import { Button } from "@mui/material";
+import { boxClasses, Button } from "@mui/material";
 
 import { rc } from "@/utils/rc";
 
 import css from "./ButtonLink.module.css";
+import { transform } from "typescript";
 
 interface ButtonLinkProps {
   to?: string;
@@ -42,10 +43,14 @@ export const ButtonLink: React.FC<ButtonLinkProps> = ({
     alignItems: "center",
     justifyContent: "center",
     gap: '10px',
+    transition: 'all .5s',
     border: variant === "primary" ? "none" : "1px solid var(--black-color)",
     " &.Mui-disabled": {
       color: "var(--white-color)",
     },
+    " &:hover" : {
+      transform: 'translateY(-2px)'
+    }
   };
 
   if (to) {

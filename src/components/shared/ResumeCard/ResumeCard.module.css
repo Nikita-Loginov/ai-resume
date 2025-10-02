@@ -1,0 +1,21 @@
+.box {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-x);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.5s;
+}
+
+.box:hover {
+  box-shadow: 12px 21px 19px 0px rgba(34, 60, 80, 0.2);
+  transform: translateY(-4px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}

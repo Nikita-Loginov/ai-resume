@@ -1,0 +1,15 @@
+.link {
+    color: var(--blueviolet-color);
+    font-weight: var(--font-width-big);
+}
+
+.text {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--gray-color-100)
+}

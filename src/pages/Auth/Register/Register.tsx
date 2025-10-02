@@ -8,7 +8,6 @@ import {
 } from "firebase/auth";
 import { FirebaseError } from "firebase/app";
 
-
 import { authFunctions } from "../utils/authFunctions";
 
 import { useDispatch } from "react-redux";
@@ -16,6 +15,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "@/store/slices/userSlice";
 
 import { TopInfo } from "@/components/shared/TopInfo/TopInfo";
+import { BottomInfo } from "../parts/BottomInfo/BottomInfo";
 import { Form } from "../parts/Form/Form";
 
 import { getFirebaseErrorMessage } from "@/utils/firebaseErrors";
@@ -89,6 +89,8 @@ export const Register = () => {
         errorSubmit={statusError}
         isLoadingSubmit={isLoading || isGoogleLoading}
       />
+
+      <BottomInfo text="Есть аккаунт?" link="Зайти" to="/auth/login" />
     </>
   );
 };

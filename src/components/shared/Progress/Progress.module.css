@@ -1,0 +1,22 @@
+.box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.box svg {
+    width: 100%;
+    height: 100%;
+}
+
+.precent {
+    position: absolute;
+    z-index: 2;
+    font-weight: var(--font-width-big);
+    line-height: 1;
+    font-size: 14px;
+}
